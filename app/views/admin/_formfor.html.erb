@@ -1,0 +1,9 @@
+<%= form_tag '/admin/save' do %>
+	<%= hidden_field :site, :id %>
+	<p> Title <%= text_field :site, :title %> </p>
+	<p> URL <%= url_field  :site, :url %> </p>
+	<p> IMG(SRC) <%= text_field :site, :img_src %> </p>
+	<p> COMMENT <%= text_field :site, :comment %> </p>
+	<p> Is Shown <%= check_box :site,  :visible, :checked => visible %> </p>
+	<p> <%= submit_tag "save" %> </p>
+<% end %>

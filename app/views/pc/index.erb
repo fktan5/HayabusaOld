@@ -1,0 +1,6 @@
+<% @sites.each do |site| %>
+	<div>
+		<%= link_to site.title, site.url %>
+		<%= site.comment %>
+	</div>
+<% end %>
