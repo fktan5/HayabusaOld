@@ -1,6 +1,11 @@
-<% @sites.each do |site| %>
-	<div>
-		<%= link_to site.title, site.url %>
-		<%= site.comment %>
-	</div>
-<% end %>
+<section class="container">
+	<% @sites.each do |site| %>
+		<div class="row">
+			<div class="span6">
+			<h2><%= site.title %></h2>
+			<p><%= site.comment %></p>
+			<p><%= link_to "Enter", site.url , :class => 'btn btn-primary'%></p>
+			</div>
+		</div>
+	<% end %>
+</section>
