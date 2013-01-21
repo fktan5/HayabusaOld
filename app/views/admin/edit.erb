@@ -1,4 +1,7 @@
 <h1>Edit</h1>
-<h3>form_for</h3>
-<%= render :partial => "formfor", :locals => {:visible => @site.visible} %>
-<p><%= link_to "Back", :action => :index %></p>
+
+<section>
+	<%= render :partial => "formfor", :locals => {:visible => @site.visible} %>
+</section>
+
+<p><%= link_to "Back", {:action => :index}, :class => "btn" %></p>

@@ -1,5 +1,7 @@
 <h1>New</h1>
 
-<%= render :partial => "formfor", :locals => {:visible => true }%>
+<section>
+	<%= render :partial => "formfor", :locals => {:visible => true }%>
+</section>
 
-<%= link_to "Back", :action => :index %>
+<p><%= link_to "Back", {:action => :index}, :class => "btn" %></p>

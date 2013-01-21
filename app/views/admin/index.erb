@@ -1,17 +1,23 @@
 <h1> Admin Menu </h1>
 
-<p> <%= link_to "New", :action => :new %></p>
-
-<% @sites.each do | site | %>
-
-	<div>
-		<%= site.visible %>
-		<%= link_to site.title, :action => "edit", :id => site.id %>
-  	<%= site.url %>
-		<%= site.comment %>
-		<%= link_to "Delete", {:action => :delete, :id => site.id}, :confirm => "OK?" %>
-	</div>
-
-<% end %>	
-
-<%= link_to "SiteTop", :controller => :pc %>
+<p>
+	<%= link_to "New", {:action => 'new'}, :class => 'btn' %>
+	<%= link_to "SiteTop", {:controller => :pc, :action => 'index'}, :class => 'btn primary' %>
+</p>
+<table class="table">
+	<tr>
+		<th>Visible</th>
+		<th>Title(and Edit)</th>
+		<th>URL</th>
+		<th>COMMENT</th>
+	</tr>
+	<% @sites.each do | site | %>
+		<tr>
+			<td><p class="label label-info"><%= site.visible %></p></td>
+			<td><%= link_to site.title, :action => "edit", :id => site.id %></td>
+	  	<td><%= site.url %></td>
+			<td><%= site.comment %></td>
+			<td><%= link_to "Delete", {:action => :delete, :id => site.id}, :confirm => "OK?", :class => 'btn btn-danger' %></td>
+		</tr>
+	<% end %>
+</table>
