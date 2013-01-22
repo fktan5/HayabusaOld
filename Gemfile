@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.11'
 gem 'pg'
+gem 'rack', '1.4.4'
 
 # Gems used only for assets and not required
 # in production environments by default.

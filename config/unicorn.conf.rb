@@ -13,7 +13,7 @@ config["development"] = {
   :working_directory => Pathname.new(File.dirname(__FILE__) + "/..").realpath
 }
 config["production"] = {
-  :port => 8000,
+  :port => 8010,
   :worker_processes => 2,
   :working_directory => "#{ENV['HOME']}/approot"
 }
