@@ -1,7 +1,9 @@
 <section class="container">
 	<div class="row">
-	<% @sites.each do |site| %>
-		<%= render :partial => "site_link", :locals => {:site => site} %>
-	<% end %>
+		<ul class="nav nav-tabs nav-stacked">
+			<% @sites.each do |site| %>
+				<%= render :partial => "site_link_sp", :locals => {:site => site} %>
+			<% end %>
+		</ul>
 	</div>
 </section>

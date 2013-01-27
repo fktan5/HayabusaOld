@@ -1,5 +1,3 @@
-
-
 class PcController < ApplicationController
 	require 'builder/xmlmarkup'
   include Jpmobile::ViewSelector

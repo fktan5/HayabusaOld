@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class AdminController < ApplicationController
-	#http_basic_authenticate_with :name => "ore", :password => "ore100"
+	http_basic_authenticate_with :name => "ore", :password => "ore100"
 	
 	def index
 		@sites = Site.all
