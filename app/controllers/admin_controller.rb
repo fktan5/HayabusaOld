@@ -39,4 +39,17 @@ class AdminController < ApplicationController
 		site.delete
 		redirect_to :action => :index
 	end
+
+  def change_visible
+		site = Site.find(params[:id])
+
+		site.visible = !site.visible
+		site.save
+
+		result = {
+			:visible => site.visible
+		}
+
+		render :text => result.to_json
+  end
 end

@@ -13,7 +13,8 @@
 	</tr>
 	<% @sites.each do | site | %>
 		<tr>
-			<td><p class="label label-info"><%= site.visible %></p></td>
+			<td><p class="label label-info" id="site_visible_<%= site.id %>">
+				<%= site.visible ? "true" : "false" %></p></td>
 			<td><%= link_to site.title, :action => "edit", :id => site.id %></td>
 	  	<td><%= site.url %></td>
 			<td><%= site.comment %></td>
@@ -21,3 +22,30 @@
 		</tr>
 	<% end %>
 </table>
+
+
+<script type="text/javascript">
+$(function() {
+	<% @sites.each do |site| %>
+		$('#site_visible_<%=site.id%>').click(
+			function(){
+				changeItemVisible(<%=site.id%>);
+			}
+		);
+	<% end %>
+});
+
+function changeItemVisible(site_id){
+	var url = '/admin/change_visible/' + site_id;
+  var params = {};
+
+  $.getJSON(url, params, function(result){
+			if(result.visible){
+				$('#site_visible_' + site_id).text('true');
+			} else {
+				$('#site_visible_' + site_id).text('false');
+			}
+		}
+	);
+}
+</script>
