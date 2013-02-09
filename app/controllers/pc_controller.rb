@@ -2,7 +2,7 @@ class PcController < ApplicationController
 	require 'builder/xmlmarkup'
   include Jpmobile::ViewSelector
   def index
-    @sites = Site.find_all_by_visible(true)
+    @sites = Site.find_all_by_visible true, :order => "id ASC"
   end
 
   def sitemap
