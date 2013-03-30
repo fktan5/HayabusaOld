@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>fktan5.net - Hayabusa</title>
+  <title>fktan5.net</title>
   <%= stylesheet_link_tag    "pc", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application" , :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-	<section id="masterhead">	
-		<div class="hero-unit" id="hero-unit">
-				<h1>fktan5.net</h1>
-				<p>since 2010</p>
-				<p>Like: Music[House, Dance, Electro, and more], Illust, Traffic Contents, Anime, CardWirth, etc...</p>
+<body class="metrouicss">
+	<section class="page bg-color-blue ">	
+		<div class="page-header">
+			<div class="page-header-content">
+				<h1 class="fg-color-white">fktan5.net</h1>
+			</div>	
+		</div>
+
+		<div class="page-region">
+			<div class="page-region-content" id="region-content">
+				<h2 class="fg-color-white">since 2010</h2>
+				<h2 class="fg-color-white">Like: Music[House, Dance, Electro, and more], Illust, Traffic Contents, Anime, CardWirth, etc...</h2>
+			</div>
 		</div>
 	</section>
 
 	<%= yield %>
 
-	<footer class="footer">
-		<div class="container">
-			<p>copyright(c) <a href="http://twitter.com/fktan5">fktan5</a> reserved.</p>
+	<footer>
+		<div class="app-bar bg-color-darken">
+			<p class="fg-color-white" id="foottxt">copyright(c) <a href="http://twitter.com/fktan5">fktan5</a> reserved.</p>
 		</div>
 	</footer>
 </body>

@@ -1,5 +1,5 @@
-<section class="container">
-	<div class="row">
+<section>
+	<div>
 	<% @sites.each do |site| %>
 		<%= render :partial => "site_link", :locals => {:site => site} %>
 	<% end %>
