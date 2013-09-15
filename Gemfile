@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+#gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 gem 'pg'
-gem 'rack', '1.4.4'
+#gem 'rack', '1.4.4'
+gem 'rack'
 gem 'jpmobile'
 
 group :assets do
