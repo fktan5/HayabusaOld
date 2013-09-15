@@ -5,24 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <%= stylesheet_link_tag    "sp", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "jquery.carouFredSel-6.2.1" %>
+  <%= javascript_include_tag "jquery.touchSwipe.min" %>
+  <%= javascript_include_tag "sp_calousel" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-	<section id="masterhead">	
-		<div class="hero-unit" id="hero-unit">
+	<section>	
+		<div>
 				<h1>fktan5.net</h1>
 				<p>since 2010</p>
 				<p>Like: Music[House, Dance, Electro, and more], Illust, Traffic Contents, Anime, CardWirth, etc...</p>
 		</div>
 	</section>
 
-<%= yield %>
-
-	<footer class="footer">
-		<div class="container">
-			<p>copyright(c) fktan5 reserved.</p>
-		</div>
+	<%= yield %>
+	
+	<footer>
+		<p>copyright(c) fktan5 reserved.</p>
 	</footer>
 </body>
 </html>

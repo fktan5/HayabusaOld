@@ -1,39 +1,45 @@
-// Place all the styles related to the pc controller here.
-// They will automatically be included in application.css.
-// You can use Less here: http://lesscss.org/
-
-//= require bootstrap_and_overrides
-@hero-unit-color: #dddddd;
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+@black: #000000;
+@white: #FFFFFF;
 
 body{
-	padding: 0px;
-}
+	margin:0px;
+	height:100%;
+	background-color:@black;
+	font-family: 'Poiret One', cursive;
+	color:@white;
 
-#masterhead{
-	background-image: url(/assets/head_sp.jpg);
-	background-size: cover;
-}
-
-#hero-unit{
-	background-color: transparent;
-	text-align: center;
-	color: @hero-unit-color;
+	section{
+		padding-left:10px;
+	}
 	h1{
-		font-size:30px;
+		font-size:48px;
 	}
 
 	p{
-		font-size:small;
+		font-size:18px;
 	}
 }
 
-.container{
-	font-size: medium;
-	text-align: center;	h2{
-		font-size: 24px;
+#site_carousel{
+	background-color:@white;
+	width:100%;
+	list-style-type:none;
+	padding:0%;
+	li{
+		background-color:@white;
+		//background-image: image-url("head_sp.jpg");
+		height:60px;
+		font-size:48px;
+		word-wrap:break-word;
+		padding-left:10px;
+		a{
+			color:@black;
+			text-decoration: none;
+		}
 	}
-	.row{
-		margin-right: 10%;
-		margin-left: 10%;
-	}
+}
+
+#swipetext{
+	font-size:16px;
 }
