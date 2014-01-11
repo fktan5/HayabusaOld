@@ -1,16 +1,16 @@
 # -*- encoding : utf-8 -*-
 Hayabusa::Application.routes.draw do
   root :to => 'pc#index'
-  match 'sitemap' => 'pc#sitemap'
+  get 'sitemap' => 'pc#sitemap'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
+  #   get 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
+  #   get 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
@@ -57,5 +57,5 @@ Hayabusa::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-   match ':controller(/:action(/:id))(.:format)'
+   get ':controller(/:action(/:id))(.:format)'
 end

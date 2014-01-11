@@ -1,8 +1,8 @@
 <article>
-	<ul id="site_carousel">
+	<ul id="linkmenu">
+		<div id="linkmenu_head">Menu</div>
 		<% @sites.each do |site| %>
 			<%= render :partial => "site_link_sp", :locals => {:site => site} %>
 		<% end %>
 	</ul>
-	<p id="swipetext">Swipe to change link</p>
 </article>

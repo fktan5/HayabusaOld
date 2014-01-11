@@ -1,17 +1,18 @@
 source 'https://rubygems.org'
 
-#gem 'rails', '3.2.11'
-gem 'rails', '3.2.12'
+gem 'rails', '4.0.2'
 gem 'pg'
-#gem 'rack', '1.4.4'
 gem 'rack'
 gem 'jpmobile'
+
+#rails4
+#gem 'strong_parameters'
 
 group :assets do
   gem 'less-rails'
   gem 'therubyracer'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'coffee-rails'
+  gem 'uglifier'
   gem 'twitter-bootstrap-rails'
 end
 
