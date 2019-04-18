@@ -1,0 +1,32 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poiret One', cursive;
+  background: url("bg_summer.png");
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  padding-top: 18%;
+}
+
+.sitename {
+  color: #ffffff;
+  font-weight: lighter;
+  text-align: center;
+}
+.sitename h1 { font-size: 3.6em; }
+.sitename h2 { font-size: 2em; }
+
+.container {
+  color: #ffffff;
+  text-align: center;
+}
+
+.container a {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #ffffff; 
+}
